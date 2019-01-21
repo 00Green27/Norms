@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Data Source Linux" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="5783f8bb-f88f-440c-a01a-f6c665b3a0bd">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:/home/ehd/Dropbox/norms/norm.db</jdbc-url>
+    <schema-pattern>*</schema-pattern>
+    <default-dialect>SQLite</default-dialect>
+    <libraries>
+      <library>
+        <url>file://$PROJECT_DIR$/../Install/sqlite-jdbc-3.7.2.jar</url>
+      </library>
+    </libraries>
+    <table name="SQLITEADMIN_QUERIES" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="NAME" sqlType="VARCHAR(100)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="SQL" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <primary-key columns="id" />
+    </table>
+    <table name="departments" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="name" sqlType="NVARCHAR(500)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <primary-key columns="id" />
+    </table>
+    <table name="equipment" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="number" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="name" sqlType="NVARCHAR(500)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="inventory_number" sqlType="NVARCHAR(200)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="year" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="cost" sqlType="FLOAT" length="2000000000" precision="10" nullable="true" jdbcType="6" />
+      <column name="amount" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="department_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="hardware_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <primary-key columns="id" />
+    </table>
+    <table name="hardware" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="name" sqlType="NVARCHAR(200)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="service" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="cost" sqlType="FLOAT" length="2000000000" precision="10" nullable="true" jdbcType="6" />
+      <primary-key columns="id" />
+    </table>
+    <table name="norms" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="department_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="hardware_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="norm" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <primary-key columns="id" />
+    </table>
+    <table name="sqlite_sequence" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="seq" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+    </table>
+    <table name="sqlite_stat1" schema="" catalog="" type="TABLE">
+      <column name="tbl" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="idx" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="stat" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+    </table>
+    <table name="sqlite_stat2" schema="" catalog="" type="TABLE">
+      <column name="tbl" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="idx" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="sampleno" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="sample" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+    </table>
+    <table name="timesheet" schema="" catalog="" type="VIEW">
+      <column name="name" sqlType="NVARCHAR(200)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="amount" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="norm" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="retirement" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="need" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="cost_for_one" sqlType="FLOAT" length="2000000000" precision="10" nullable="true" jdbcType="6" />
+      <column name="department_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="cost" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="no_retirement_cost" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="retirement_cost" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+    </table>
+  </data-source>
+  <data-source source="LOCAL" name="Data Source Windows" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="7c72d3dc-6797-4f8a-87ff-d77f3e4f3931">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:C:\Users\ehd\Dropbox\norms\norm.db</jdbc-url>
+    <schema-pattern>*</schema-pattern>
+    <default-dialect>SQLite</default-dialect>
+    <libraries>
+      <library>
+        <url>file://$PROJECT_DIR$/../Install/sqlite-jdbc-3.7.2.jar</url>
+      </library>
+    </libraries>
+    <table name="SQLITEADMIN_QUERIES" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="NAME" sqlType="VARCHAR(100)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="SQL" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <primary-key columns="id" />
+    </table>
+    <table name="departments" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="name" sqlType="NVARCHAR(500)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <primary-key columns="id" />
+    </table>
+    <table name="equipment" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="number" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="name" sqlType="NVARCHAR(500)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="inventory_number" sqlType="NVARCHAR(200)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="year" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="cost" sqlType="FLOAT" length="2000000000" precision="10" nullable="true" jdbcType="6" />
+      <column name="amount" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="department_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="hardware_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <primary-key columns="id" />
+    </table>
+    <table name="hardware" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="name" sqlType="NVARCHAR(200)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="service" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="cost" sqlType="FLOAT" length="2000000000" precision="10" nullable="true" jdbcType="6" />
+      <primary-key columns="id" />
+    </table>
+    <table name="norms" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="department_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="hardware_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4" />
+      <column name="norm" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <primary-key columns="id" />
+    </table>
+    <table name="sqlite_sequence" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="seq" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+    </table>
+    <table name="sqlite_stat1" schema="" catalog="" type="TABLE">
+      <column name="tbl" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="idx" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="stat" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+    </table>
+    <table name="sqlite_stat2" schema="" catalog="" type="TABLE">
+      <column name="tbl" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="idx" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="sampleno" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="sample" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+    </table>
+    <table name="timesheet" schema="" catalog="" type="VIEW">
+      <column name="name" sqlType="NVARCHAR(200)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="amount" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="norm" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="retirement" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="need" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="cost_for_one" sqlType="FLOAT" length="2000000000" precision="10" nullable="true" jdbcType="6" />
+      <column name="department_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4" />
+      <column name="cost" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="no_retirement_cost" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="retirement_cost" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+    </table>
+  </data-source>
+</component>
